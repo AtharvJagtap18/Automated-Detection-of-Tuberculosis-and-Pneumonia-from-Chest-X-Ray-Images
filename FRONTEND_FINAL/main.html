@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TB Detection | Dashboard</title>
+  <script src="assets/js/theme.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div class="app-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div>
+      <p class="topbar-label">TB Screening Portal</p>
+      <h1>TB Detection Dashboard</h1>
+    </div>
+    <div class="topbar-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode">
+        <span class="toggle-shell" aria-hidden="true">
+          <span class="icon-sun"></span>
+          <span class="toggle-knob"></span>
+          <span class="icon-moon"></span>
+        </span>
+      </button>
+      <button class="btn-ghost" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="dashboard-layout">
+      <section class="panel upload-card">
+        <h2>Upload Chest X-ray</h2>
+        <p class="panel-copy">Select a frontal chest radiograph image to run automated TB screening.</p>
+
+        <label for="imageInput" class="file-label">Diagnostic Image</label>
+        <input type="file" id="imageInput" accept="image/*">
+
+        <button class="btn-primary" onclick="analyze()">Analyze Image</button>
+      </section>
+
+      <section class="panel result-card">
+        <h2>Analysis Output</h2>
+        <p class="panel-copy">Results will appear here after processing.</p>
+        <p id="result" aria-live="polite">No analysis yet.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>TB Detection Capstone</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
